@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MSSAConfApp.Data;
+using MSSAConfApp.Services;
 
 namespace MSSAConfApp
 {
@@ -19,6 +20,13 @@ namespace MSSAConfApp
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddSingleton<JsonFileSessionService>(s =>
+            {
+                var session = new JsonFileSessionService();
+                session.InitializeSessions();
+                return session;
+            });
 
             var app = builder.Build();
 

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vfTz1qLCZK0Hnlo68QsdzsnlNUJQnEOEaRLoYTB8bRMkrgenQGKw+cCFD0I+LgW6WtMoKU8vM/ocEh1hgDV7/g==",
+  "dgSpecHash": "mZUfc4Q30UuqRgY3HY0P4kjey2Z+e+PpxzIMi90z08a5W9OBnVm7zvEPjqAt9g0atGFI7ZTI3ROdzVR9J0hJNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\AlexW\\Desktop\\MSSAConfApp\\MSSAConfApp\\MSSAConfApp\\MSSAConfApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\AlexW\\.nuget\\packages\\bootstrap\\5.2.1\\bootstrap.5.2.1.nupkg.sha512",
     "C:\\Users\\AlexW\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\AlexW\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.8\\microsoft.aspnetcore.cryptography.internal.6.0.8.nupkg.sha512",
     "C:\\Users\\AlexW\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.8\\microsoft.aspnetcore.cryptography.keyderivation.6.0.8.nupkg.sha512",
