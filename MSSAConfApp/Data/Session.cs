@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MSSAConfApp.Data
 {
-    public class Session
+    public partial class Session
     {
         public int Id { get; set; }
         public string Title { get; set; }

@@ -5,7 +5,7 @@ namespace MSSAConfApp.Data
 {
     public partial class NewTable
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string? Title { get; set; }
         public string? Location { get; set; }
         public string? Keyspeaker { get; set; }

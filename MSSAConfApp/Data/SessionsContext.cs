@@ -16,6 +16,7 @@ namespace MSSAConfApp.Data
         {
         }
 
+        public virtual DbSet<Customer> Customers { get; set; } = null!;
         public virtual DbSet<Session> NewTables { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -31,9 +32,9 @@ namespace MSSAConfApp.Data
         {
             modelBuilder.Entity<Session>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("NewTable");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.Property(e => e.Keyspeaker).HasMaxLength(50);
 
@@ -44,7 +45,29 @@ namespace MSSAConfApp.Data
                 entity.Property(e => e.Track1).HasMaxLength(50);
 
                 entity.Property(e => e.Track2).HasMaxLength(50);
+
+                //entity.Property(e => e.Seats);
+
+                //entity.Property(e => e.Imageurl);
             });
+            modelBuilder.Entity<Customer>(entity =>
+            {
+                entity.ToTable("Customer");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.Email).HasMaxLength(50);
+
+                entity.Property(e => e.Event).HasMaxLength(50);
+
+                entity.Property(e => e.FirstName).HasMaxLength(50);
+
+                entity.Property(e => e.LastName).HasMaxLength(50);
+
+                entity.Property(e => e.Password).HasMaxLength(50);
+            });
+
+            
 
             OnModelCreatingPartial(modelBuilder);
         }
