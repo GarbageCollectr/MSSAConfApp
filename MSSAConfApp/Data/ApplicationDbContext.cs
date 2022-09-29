@@ -9,5 +9,7 @@ namespace MSSAConfApp.Data
             : base(options)
         {
         }
+
+
     }
 }

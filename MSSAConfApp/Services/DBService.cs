@@ -1,10 +1,10 @@
-﻿using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
 using MSSAConfApp.Data;
 
 namespace MSSAConfApp.Services
 {
-    public class JsonFileSessionService
+    public class DBService
     {
         public IEnumerable<Session> Sessions { get; set; }
 
@@ -24,6 +24,6 @@ namespace MSSAConfApp.Services
                     });
             }
         }
-        
+
     }
 }

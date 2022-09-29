@@ -11,22 +11,19 @@ namespace MSSAConfApp
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            //Add services to the container.
+           var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.AddSingleton<SessionsContext>();
+
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddSingleton<JsonFileSessionService>(s =>
-            {
-                var session = new JsonFileSessionService();
-                session.InitializeSessions();
-                return session;
-            });
 
             var app = builder.Build();
 
