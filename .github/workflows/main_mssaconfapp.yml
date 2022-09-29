@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'MSSAConfApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_80DE179AC5F0418CBB0A1B899EE12983 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AD9B6E78F57B443988646FAEF5A4EC9D }}
           package: .
