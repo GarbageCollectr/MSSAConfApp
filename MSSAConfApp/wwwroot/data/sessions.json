@@ -1,0 +1,42 @@
+[
+	{
+		"Id": 1,
+		"Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c7/27/eb/caption.jpg?w=700&h=500&s=1",
+		"Title": "Contoso Denver",
+		"Location": "Denver Lane",
+		"KeySpeaker": "Bob Bobertson",
+		"Track1": "T1",
+		"Track2": "T2",
+		"Seats": 100
+	},
+	{
+		"Id": 2,
+		"Image": "https://a.cdn-hotels.com/gdcs/production180/d495/d6bc9f7d-98d9-4c49-a97f-1c101e966878.jpg",
+		"Title": "Contoso Austin",
+		"Location": "Austin Lane",
+		"KeySpeaker": "Bob Bobertson",
+		"Track1": "T1",
+		"Track2": "T2",
+		"Seats": 100
+	},
+	{
+		"Id": 3,
+		"Image": "https://sph.washington.edu/sites/default/files/inline-images/Seattle-Rainier%201200x600_0.jpg",
+		"Title": "Contoso Seattle",
+		"Location": "Seattle Lane",
+		"KeySpeaker": "Bob Bobertson",
+		"Track1": "T1",
+		"Track2": "T2",
+		"Seats": 100
+	},
+	{
+		"Id": 4,
+		"Image": "https://www.travelandleisure.com/thmb/JWO4CNVDNSR-aLDBT93jVlHV1DQ=/1800x1200/filters:fill(auto,1)/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg",
+		"Title": "Contoso New York",
+		"Location": "New York Lane",
+		"KeySpeaker": "Bob Bobertson",
+		"Track1": "T1",
+		"Track2": "T2",
+		"Seats": 100
+	}
+]

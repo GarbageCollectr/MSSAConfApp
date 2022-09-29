@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "A-Team Conference Session Details";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your Conference Sessions.</p>
+
+
+
+
+    <div class="card">
+        <div class="card-img" style="background-image: url('@Model.Image');"></div>
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-body">
+
+        <p>Location: @Model.Location</p>
+
+        <p>Keynote Speaker: @Model.KeySpeaker</p>
+
+        <p>Track 1: @Model.Track1</p>
+
+        <p>Track 2: @Model.Track2</p>
+
+        <p>Available Seats: @Model.Seats</p>
+
+
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register" asp-route-id="@Model.Id">Register</a>
+        </div>
+    </div>
+
