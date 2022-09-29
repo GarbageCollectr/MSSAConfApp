@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using MSSAConfApp.Models;
 using MSSAConfApp.Services;
 using MSSAConfApp.Data;
@@ -9,7 +10,7 @@ namespace ConferenceApplication.Controllers
 {
     public class HomeController : Controller
     {
-
+        
         private readonly ILogger<HomeController> _logger;
         //private JsonFileSessionService _fileSessionService;
         private SessionsContext _sessionsContext;
@@ -26,8 +27,6 @@ namespace ConferenceApplication.Controllers
 
         public IActionResult Index()
         {
-            SessionsContext testSession = new SessionsContext();
-            var sessdata = testSession.NewTables;
             return View();
         }
 
@@ -35,7 +34,7 @@ namespace ConferenceApplication.Controllers
         {
             return View();
         }
-
+        //[Authorize]
         public IActionResult Sessions()
         {
 

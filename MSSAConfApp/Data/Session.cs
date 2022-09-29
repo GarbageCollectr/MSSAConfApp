@@ -1,11 +1,13 @@
 ﻿using System.Text.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MSSAConfApp.Data
 {
-    public class Session
+    public partial class Session
     {
+        [Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public string Location { get; set; }
