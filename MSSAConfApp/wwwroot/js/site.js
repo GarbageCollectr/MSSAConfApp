@@ -1,4 +1,21 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿try {
+    var storTest = window['localStorage'];
+    storTest.setItem("", ".");
+    storTest.removeItem("");
+}
+catch (e) { alert("Local Storage Not Available"); }
 
-// Write your JavaScript code.
+function RandomId(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var ls;
+ls = localStorage;
+var newUser = true;
+while (newUser) {
+    var newId = RandomId(1, 1000000);
+    if (ls.key(newId) == null) {
+        newUser = false;
+        ls.setItem(newId, "Username")
+    }
+}
