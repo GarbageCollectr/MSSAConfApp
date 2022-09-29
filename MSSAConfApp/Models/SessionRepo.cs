@@ -1,4 +1,6 @@
-﻿namespace MSSAConfApp.Models
+﻿using MSSAConfApp.Data;
+
+namespace MSSAConfApp.Models
 {
     public class SessionRepo
     {
